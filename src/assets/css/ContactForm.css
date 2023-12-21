@@ -1,0 +1,26 @@
+.contact-form-container {
+  max-width: 400px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.contact-form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
