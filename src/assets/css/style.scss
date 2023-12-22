@@ -1,0 +1,19 @@
+@use "components/Desktop3D";
+@use "components/section1";
+
+
+// Colors {
+$accent_color: #5239EA;
+$main_page: #140827;
+// }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: $main_page;
+}
