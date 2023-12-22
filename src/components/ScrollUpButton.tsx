@@ -1,6 +1,5 @@
 import React from 'react';
-import ArrowUpIcon from '.src/assets/svg/ScrollUp.svg';
-import src from "*.svg";
+
 
 
 

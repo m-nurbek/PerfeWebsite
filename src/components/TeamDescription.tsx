@@ -1,8 +1,9 @@
-import {useSpring, animated, useInView} from 'react-spring';
-import {useRef} from "react";
+
+import Reveal from 'react-reveal/Reveal';
 
 
 const personCardStyle = {
+    height: "800px",
   padding: '15px',
   textAlign: 'center',
     opacity: 0,
@@ -12,7 +13,7 @@ const personCardStyle = {
 const imageStyle = {
   width: '250px',
   height: '250px',
-  borderRadius: '20%',
+  borderRadius: '10%',
   objectFit: 'cover',
 };
 
@@ -29,55 +30,39 @@ interface Props {
     link: string
 }
 
-const MyComponent = () => {
-  const f12Ref = useRef<HTMLDivElement>(null); // Specify the type of ref
-
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
-
-  const props = useSpring({
-    opacity: inView ? 1 : 0,
-    from: { opacity: 0 },
-  });
-
-  return (
-    <animated.div ref={(el) => { ref(el); f12Ref.current = el; }} style={props}>
-      {/* Your PersonCards component here */}
-    </animated.div>
-  );
-};
-
 
 const PersonCard = ({ name, role, description, src, link }: Props) => {
 
   return (
-    <div style={personCardStyle}>
-      <img src={src} alt={name} style={imageStyle} />
       <div>
-        <h3 style={{fontFamily: "Montserrat"}}>{name}</h3>
-        <p style={{fontSize: '15px', fontFamily: "Montserrat-Bold", fontWeight: "lighter"}}>{role}</p>
-        <p style={{fontFamily: "Montserrat"}}>{description}</p>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-          Learn more
-        </a>
+        <Reveal effect="fadeInUp">
+        <div style={personCardStyle}>
+          <img src={src} alt={name} id="top_scroll" style={imageStyle} />
+          <div>
+            <h3 style={{fontFamily: 'Montserrat-Bold'}}>{name}</h3>
+            <p style={{fontSize: '15px', fontFamily: "Montserrat-Bold", fontWeight: "lighter"}}>{role}</p>
+            <p style={{fontFamily: "Montserrat"}}>{description}</p>
+            <a href={link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+              Learn more
+            </a>
+          </div>
+        </div>
+        </Reveal>
       </div>
-    </div>
   );
 };
 
-const PeopleRow = () => {
+function TeamDescription(){
   const peopleRowStyle = {
     display: 'flex',
     justifyContent: 'space-around',
   };
 
-  const f12Ref = useRef();
 
   return (
       <>
           <h1 style={{fontFamily: "Montserrat", fontSize: "60px"}}>Our Team </h1>
-        <div style={peopleRowStyle} ref={f12Ref}>
+        <div style={peopleRowStyle} >
 
 
           <PersonCard
@@ -111,6 +96,8 @@ const PeopleRow = () => {
         </div>
           </>
   );
-};
+}
 
-export default PeopleRow; MyComponent;
+
+export default TeamDescription;
+

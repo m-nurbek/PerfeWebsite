@@ -1,7 +1,6 @@
 import {useRef, useState} from 'react';
 
 const ContactForm = () => {
-  const predictionCarRef = useRef(null);
 
   // State to store form data
   const [formData, setFormData] = useState({
