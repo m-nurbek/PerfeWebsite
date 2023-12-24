@@ -1,38 +1,11 @@
-import React, {useRef} from "react";
-
-const maxDegreeX = 3;
-const maxDegreeY = 3;
+import PerfeImg from "../assets/img/laptop_display.jpg";
+import MouseTracking from "./animation_kit/MouseTracking.tsx";
 
 
 function Desktop3D() {
-    const ref = useRef<HTMLDivElement>(null);
-
-    function rotateElement(event: React.MouseEvent, element: React.MutableRefObject<HTMLDivElement>) {
-        // get mouse position
-        const x = event.clientX;
-        const y = event.clientY;
-
-        // find the middle of the container that bound the element
-        const rect = element.current.getBoundingClientRect();
-        const middleX = (rect.left + rect.width) / 2;
-        const middleY = (rect.top + rect.height) / 2;
-
-        // get offset from the middle in %
-        const offsetX = ((x - middleX) / middleX);
-        const offsetY = ((y-middleY) / middleY);
-
-        // based on that get degrees
-        const degreeX = offsetX * maxDegreeX;
-        const degreeY = offsetY * maxDegreeY;
-
-        // update the style
-        element.current.style.setProperty("--rotateX", -1 * degreeY + "deg");
-        element.current.style.setProperty("--rotateY", degreeX + "deg");
-    }
-
     return (
         <>
-            <div id={"scene"} ref={ref} onMouseMove={(e) => rotateElement(e, ref)}>
+            <MouseTracking id={"scene"}>
                 <div className="laptop">
                     <div className="lid">
                         <div className="top">
@@ -57,7 +30,7 @@ function Desktop3D() {
                             <span className="camera"></span>
 
                             <div className="screen">
-                                <img src={"src/assets/img/laptop_display.jpg"} alt={"/PF - operative and efficient"} style={{width: "100%", height: "100%"}}/>
+                                <img src={PerfeImg} alt={"/PF - operative and efficient"} style={{width: "100%", height: "100%"}}/>
                             </div>
 
                             <div className="text">Perfe Agency</div>
@@ -226,7 +199,7 @@ function Desktop3D() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </MouseTracking>
         </>
     );
 }
