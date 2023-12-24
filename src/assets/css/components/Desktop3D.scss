@@ -2,22 +2,12 @@
 // to decrease the size of the laptop
 $padding: 3em;
 #scene {
-    perspective: 2000px;
     z-index: 1;
     min-height: fit-content;
     width: fit-content;
     position: relative;
     padding: $padding $padding $padding + 14em $padding + 6em;
-
-    background-color: rgba(156, 156, 156, 0.2);
-
-    --rotateY: 0deg;
-    --rotateX: 0deg;
-
-    transform-style: preserve-3d;
-    transform: scale(0.7)
-            rotateY(var(--rotateY))
-            rotateX(var(--rotateX));
+    //background-color: rgba(156, 156, 156, 0.2);
 }
 
 
