@@ -4,11 +4,13 @@ import ScrollUpButton from "./components/ScrollUpButton.tsx";
 import OurServices from "./components/OurServices.tsx";
 import Footer from "./components/Footer.tsx";
 import './assets/css/style.scss';
+import WelcomeScreen from "./components/WelcomeScreen.tsx";
 
 
 function App() {
     return (
         <>
+            <WelcomeScreen />
             <OurServices/>
             <TeamDescription/>
             <Footer/>
