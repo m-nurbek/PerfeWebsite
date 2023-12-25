@@ -1,12 +1,12 @@
+import {CSSProperties} from "react";
 
 
 function SocialFooter(){
-    const versionStyle = {
+    const versionStyle: CSSProperties = {
         color: 'gray',
         textAlign: 'left',
         marginLeft: '20px',
         display: 'flex',
-        textAlign: 'left',
     };
 
     return(

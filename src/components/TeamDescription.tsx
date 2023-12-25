@@ -1,8 +1,14 @@
-import React, { useEffect } from 'react';
+import {CSSProperties} from 'react';
 import Reveal from 'react-reveal/Reveal';
 import { animated, useInView, useSpring } from 'react-spring';
 
-const personCardStyle = {
+import ArdakJPG from "../assets/img/Ardak.jpg";
+import NurbekJPG from "../assets/img/Nurbek.jpg";
+import DariyaJPG from "../assets/img/Alda.jpg";
+import AldaJPG from "../assets/img/Alda.jpg";
+
+
+const personCardStyle: CSSProperties = {
   height: '800px',
   padding: '15px',
   textAlign: 'center',
@@ -10,14 +16,14 @@ const personCardStyle = {
   transition: 'opacity 0.8s ease-in-out',
 };
 
-const imageStyle = {
+const imageStyle: CSSProperties = {
   width: '250px',
   height: '250px',
   borderRadius: '10%',
   objectFit: 'cover',
 };
 
-const linkStyle = {
+const linkStyle: CSSProperties = {
   color: '#007bff',
   textDecoration: 'none',
 };
@@ -39,7 +45,7 @@ const PersonCard = ({ name, role, description, src, link }: Props) => {
 
   return (
     <Reveal effect="fadeInUp">
-      <animated.div  style={{ ...springProps, ...personCardStyle }}>
+      <animated.div style={{ ...springProps, ...personCardStyle }}>
         <img src={src} alt={name} id="top_scroll" style={imageStyle} />
         <div>
           <h3 style={{ fontFamily: 'Montserrat-Bold' }}>{name}</h3>
@@ -68,28 +74,28 @@ function TeamDescription() {
           name="Dariya"
           role="Project Manager"
           description="Collects Deans' lists like infinity stones"
-          src="/src/assets/img/Dariya.jpg"
+          src={DariyaJPG}
           link="https://example.com/person1"
         />
         <PersonCard
           name="Aldamzhar"
           role="Fullstack Developer"
           description="J&J champ"
-          src="/src/assets/img/Alda.jpg"
+          src={AldaJPG}
           link="https://example.com/person2"
         />
         <PersonCard
           name="Nurbek"
           role="Backend Developer"
           description="Backend+ML+CN+Frontend developer"
-          src="/src/assets/img/Nurbek.jpg"
+          src={NurbekJPG}
           link="https://example.com/person3"
         />
         <PersonCard
           name="Ardak"
           role="Frontend Developer"
           description="Runway model"
-          src="/src/assets/img/Ardak.jpg"
+          src={ArdakJPG}
           link="https://example.com/person4"
         />
       </div>

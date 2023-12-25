@@ -1,8 +1,8 @@
-
+import {CSSProperties} from "react";
 
 
 function LocalTimeFooter(){
-    const versionStyle = {
+    const versionStyle: CSSProperties = {
         color: 'gray',
         textAlign: 'left',
     };

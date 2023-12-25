@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect, CSSProperties} from 'react';
+import ScrollUpSvg from "../assets/svg/ScrollUp.svg";
 
 interface ButtonProps extends React.HTMLProps<HTMLDivElement> {
   onClick: React.MouseEventHandler<HTMLDivElement>;
 }
 
-const buttonStyle = {
+const buttonStyle: CSSProperties = {
   width: '70px',
   height: '70px',
   transition: 'opacity 0.1s ease', // Smooth opacity transition
 };
 
-const containerStyle = {
+const containerStyle: CSSProperties = {
   width: '150px', // Adjust the width to fit your text
   position: 'fixed',
   bottom: '80px',
@@ -25,9 +26,9 @@ const containerStyle = {
   transition: 'opacity 0.1s ease', // Smooth opacity transition
 };
 
-const textStyle = {
-    marginTop: '8px',
-    whiteSpace: 'nowrap',
+const textStyle: CSSProperties = {
+  marginTop: '8px',
+  whiteSpace: 'nowrap',
   zIndex: 1000,
 };
 
@@ -63,7 +64,7 @@ function ScrollUpButton({ onClick }: ButtonProps) {
         <h4>Scroll Up</h4>
       </div>
       <div style={{ ...buttonStyle, opacity: showButton ? 1 : 0 }}>
-        <img src="./src/assets/svg/ScrollUp.svg" alt="Scroll Up" width={70} height={70} />
+        <img src={ScrollUpSvg} alt="Scroll Up" width={70} height={70} />
       </div>
     </div>
   );
