@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  gap: 10px; /* Adjust gap as needed */
+}
+
+.column {
+  padding: 10px; /* Adjust padding as needed */
+  flex-direction: column;
+}
+
