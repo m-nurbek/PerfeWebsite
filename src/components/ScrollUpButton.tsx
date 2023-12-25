@@ -1,5 +1,6 @@
-import React, {useState, useEffect, CSSProperties} from 'react';
-import ScrollUpSvg from "../assets/svg/ScrollUp.svg";
+
+import React, { useState, useEffect } from 'react';
+import ScrollUpIcon from '/src/assets/svg/ScrollUp.svg';
 
 interface ButtonProps extends React.HTMLProps<HTMLDivElement> {
   onClick: React.MouseEventHandler<HTMLDivElement>;
@@ -64,7 +65,9 @@ function ScrollUpButton({ onClick }: ButtonProps) {
         <h4>Scroll Up</h4>
       </div>
       <div style={{ ...buttonStyle, opacity: showButton ? 1 : 0 }}>
-        <img src={ScrollUpSvg} alt="Scroll Up" width={70} height={70} />
+
+        <img src={ScrollUpIcon} alt="Scroll Up" width={70} height={70} />
+
       </div>
     </div>
   );

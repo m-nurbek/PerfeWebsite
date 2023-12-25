@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { animated, config, useInView, useSpring } from 'react-spring';
-import Service2Png from "../assets/img/Service2.png";
+import WebsiteImage from '/src/assets/img/Service2.png';
+
 
 function AnimatedComponentLeft({ children }) {
   const [ref, inView] = useInView();
@@ -64,11 +65,13 @@ function OurServices() {
       <div className="container">
         <AnimatedComponentLeft>
           <div className="column" >
-            <img src={Service2Png} style={{ transform: `scale(${imageScale})` }}  alt={"Service"}/>
+
+            <img src={WebsiteImage} style={{ transform: `scale(${imageScale})` }} />
             <div className="column">
               <h4 style={{ fontFamily: "Montserrat", fontSize: "20px", marginRight: "160px", marginLeft: "160px" }}>We create websites from the ground up.</h4>
             </div>
-            <img src={Service2Png} style={{ marginTop: "60px", transform: `scale(${imageScale})` }}  alt={"Service"}/>
+            <img style={{ marginTop: "60px", transform: `scale(${imageScale})` }} src={WebsiteImage} />
+
             <div className="column">
               <h4 style={{ fontFamily: "Montserrat", fontSize: "20px", marginRight: "160px", marginLeft: "160px" }}>We deliver personalized website designs.</h4>
             </div>
@@ -76,7 +79,9 @@ function OurServices() {
         </AnimatedComponentLeft>
         <AnimatedComponentRight>
           <div className="column">
-            <img src={Service2Png} style={{ marginTop: "200px", transform: `scale(${imageScale}) rotate(-90deg)` }}  alt={"Service"}/>
+
+            <img src={WebsiteImage} style={{ marginTop: "200px", transform: `scale(${imageScale}) rotate(-90deg)` }} />
+
             <div className="column">
               <h4 style={{ fontFamily: "Montserrat", fontSize: "20px", marginRight: "160px", marginLeft: "160px", marginTop: "140px" }}>We revise existing websites & recommend improvements.</h4>
             </div>

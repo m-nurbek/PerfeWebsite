@@ -1,7 +1,8 @@
 import {useState} from "react"; // Import your CSS file
-import PFLogoSVG from "../assets/svg/PF_logo.svg";
-import InstIconSVG from "../assets/svg/PF_logo.svg";
-import EmailIconSVG from "../assets/svg/EmailIcon.svg";
+
+import InstIcon from '../assets/svg/InstIcon.svg';
+import EmailIcon from '../assets/svg/EmailIcon.svg';
+import PFLogo from '../assets/svg/PF_logo.svg';
 
 
 function Footer(){
@@ -36,7 +37,9 @@ function Footer(){
   <div className="container">
     <div className="column" >
       <div style={{gap: '39px', display: 'inline-flex'}}>
-        <img src={PFLogoSVG} style={{marginBottom: '10px'}} alt={"Perfe logo"}/>
+
+        <img src={PFLogo} style={{marginBottom: '10px'}}/>
+
         <h1 style={{fontSize: '60px', width: '600px'}}>Let's Work Together</h1>
       </div>
       <div className="column" style={{marginTop:'120px', marginBottom: '100px'}}>
@@ -106,10 +109,12 @@ function Footer(){
         <h4>Find us in social media</h4>
         <div className="column">
           <div className="column">
-            <img src={InstIconSVG} style={{ transform: 'scale(0.5)'}} alt={"instagram icon"}/>
+
+            <img src={InstIcon} style={{ transform: 'scale(0.5)'}} />
             <span style={{ marginLeft: '0px'}}>Instagram</span>
             <img
-              src={EmailIconSVG}
+              src={EmailIcon}
+
               style={{ transform: 'scale(1.2)', marginBottom: '16px', marginLeft: '10px' }}
              alt={"email icon"}/>
             <span style={{ marginLeft: '15px' }}>Email</span>
