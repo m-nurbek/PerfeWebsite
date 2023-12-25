@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  /* padding: 2rem; */
+  background: radial-gradient(40.71% 18.62% at 72.37% 31.81%, #5239EA 0%, rgba(20, 8, 39, 0.00) 100%);
+  background-color: #140827;
+  overflow: hidden;
 }
 
 .logo {
@@ -11,6 +12,7 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
