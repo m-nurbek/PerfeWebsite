@@ -1,5 +1,8 @@
 import '/src/assets/css/Footer.css';
 import {useState} from "react"; // Import your CSS file
+import InstIcon from '/src/assets/svg/InstIcon.svg';
+import EmailIcon from '/src/assets/svg/EmailIcon.svg';
+import PFLogo from '/src/assets/svg/PF_logo.svg';
 
 
 function Footer(){
@@ -34,7 +37,7 @@ function Footer(){
   <div className="container">
     <div className="column" >
       <div style={{gap: '39px', display: 'inline-flex'}}>
-        <img src="src/assets/svg/PF_logo.svg" style={{marginBottom: '10px'}}/>
+        <img src={PFLogo} style={{marginBottom: '10px'}}/>
         <h1 style={{fontSize: '60px', width: '600px'}}>Let's Work Together</h1>
       </div>
       <div className="column" style={{marginTop:'120px', marginBottom: '100px'}}>
@@ -102,10 +105,10 @@ function Footer(){
         <h4>Find us in social media</h4>
         <div className="column">
           <div className="column">
-            <img src="/src/assets/svg/InstIcon.svg" style={{ transform: 'scale(0.5)'}} />
+            <img src={InstIcon} style={{ transform: 'scale(0.5)'}} />
             <span style={{ marginLeft: '0px'}}>Instagram</span>
             <img
-              src="/src/assets/svg/EmailIcon.svg"
+              src={EmailIcon}
               style={{ transform: 'scale(1.2)', marginBottom: '16px', marginLeft: '10px' }}
             />
             <span style={{ marginLeft: '15px' }}>Email</span>
