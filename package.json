@@ -10,10 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^10.16.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-motion": "^0.5.2",
     "react-reveal": "^1.0.1",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "react-intersection-observer": "9.5.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

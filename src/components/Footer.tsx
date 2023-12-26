@@ -3,6 +3,7 @@ import {useState} from "react"; // Import your CSS file
 import InstIcon from '/src/assets/svg/InstIcon.svg';
 import EmailIcon from '/src/assets/svg/EmailIcon.svg';
 import PFLogo from '/src/assets/svg/PF_logo.svg';
+import * as https from "https";
 
 
 function Footer(){
@@ -102,16 +103,16 @@ function Footer(){
 
     <div style={{ textAlign: 'center', marginLeft: '200px', marginTop: '200px'}}>
       <div className="column">
-        <h4>Find us in social media</h4>
         <div className="column">
           <div className="column">
-            <img src={InstIcon} style={{ transform: 'scale(0.5)'}} />
-            <span style={{ marginLeft: '0px'}}>Instagram</span>
+            <h3 style={{marginTop: '180px'}}>Find us in social media</h3>
+              <a href={"https://www.instagram.com/perfe_agency/"} onClick={(e) => {e.preventDefault(); window.open("https://www.instagram.com/perfe_agency/")}}>
+                  <img src={InstIcon} style={{ transform: 'scale(0.7)'}} />
+              </a>
             <img
               src={EmailIcon}
-              style={{ transform: 'scale(1.2)', marginBottom: '16px', marginLeft: '10px' }}
+              style={{ transform: 'scale(1.6)', marginBottom: '16px', marginLeft: '40px' }}
             />
-            <span style={{ marginLeft: '15px' }}>Email</span>
           </div>
         </div>
       </div>
