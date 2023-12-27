@@ -1,10 +1,13 @@
 import PerfeImg from "../assets/img/laptop_display.jpg";
 import MouseTracking from "./animation_kit/MouseTracking.tsx";
 
-
-function Desktop3D() {
+interface Props {
+    className?: string;
+}
+function Desktop3D({className} : Props) {
     return (
         <>
+            <div className={className ? className : ""}>
             <MouseTracking id={"scene"}>
                 <div className="laptop">
                     <div className="lid">
@@ -200,6 +203,7 @@ function Desktop3D() {
                     </div>
                 </div>
             </MouseTracking>
+            </div>
         </>
     );
 }

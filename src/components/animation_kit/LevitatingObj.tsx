@@ -4,12 +4,13 @@ import {ReactNode} from "react";
 
 interface Props {
     children: ReactNode;
+    className?: string;
     tension?: number;
     friction?: number;
     transform?: string;
 }
 
-function LevitatingObj({children, tension, friction, transform} : Props) {
+function LevitatingObj({children, className, tension, friction, transform} : Props) {
     const styles = useSpring({
         from: {transform: 'translate3d(0, 0px, 0)'},
         to: [
@@ -22,7 +23,7 @@ function LevitatingObj({children, tension, friction, transform} : Props) {
 
     const child = <img src={icon1} alt={"icon"}/>
     return (
-        <animated.div style={styles}>
+        <animated.div style={styles} className={className ? className : ""}>
             {children ? children : child}
         </animated.div>
     );

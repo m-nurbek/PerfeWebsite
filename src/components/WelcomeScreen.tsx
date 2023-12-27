@@ -45,7 +45,7 @@ function WelcomeScreen() {
                     wrapper="span"
                     speed={{type: 'keyStrokeDelayInMs', value: 100}}
                     style={{
-                        fontSize: '3em',
+                        fontSize: '1.5em',
                         fontFamily: 'Arial',
                         display: 'inline-block',
                         color: "white",
