@@ -1,4 +1,4 @@
-import PerfeLogo from "../assets/img/PerfeWhite.png";
+import PerfeLogo from "/PerfeWhite.png";
 
 
 export default function Navbar() {

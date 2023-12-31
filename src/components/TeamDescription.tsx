@@ -1,7 +1,7 @@
-import Ardak from "../assets/img/Ardak.jpg";
-import Nurbek from "../assets/img/Nurbek.jpg";
-import Alda from "../assets/img/Alda.jpg";
-import Dariya from "../assets/img/Dariya.jpg";
+import Ardak from "/Ardak.jpg";
+import Nurbek from "/Nurbek.jpg";
+import Alda from "/Alda.jpg";
+import Dariya from "/Dariya.jpg";
 import { useEffect, useRef} from 'react';
 
 

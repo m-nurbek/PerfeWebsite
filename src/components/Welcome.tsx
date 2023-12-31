@@ -1,4 +1,4 @@
-import DesktopImg from "../assets/img/icons/Rectangle.png";
+import DesktopImg from "/icons/Rectangle.png";
 import Snow1 from "../assets/svg/Snow1";
 import Snow2 from "../assets/svg/Snow2";
 import Snow3 from "../assets/svg/Snow3";

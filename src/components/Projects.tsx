@@ -1,7 +1,7 @@
 import GalleryItem from "./GalleryItem";
-import MoneyOfKZ from "../assets/img/MoneyOfKZ.jpg";
-import PortfolioNurbek from "../assets/img/PortfolioNurbek.png";
-import PortfolioDariya from "../assets/img/PortfolioDariya.png";
+import MoneyOfKZ from "/MoneyOfKZ.jpg";
+import PortfolioNurbek from "/PortfolioNurbek.png";
+import PortfolioDariya from "/PortfolioDariya.png";
 
 import { useEffect, useRef } from "react";
 
