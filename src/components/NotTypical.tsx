@@ -32,7 +32,7 @@ export default function NotTypical() {
             <>
                 <h1>Not your typical web agency</h1>
                 <p>PerFe is an <span>operative and efficient</span> web development agency where each project becomes a unique work of art. We specialise in modern and concise web solutions, where style meets functionality.</p>
-                <a href="">View services <span>→</span></a>
+                <a href="#services">View services <span>→</span></a>
             </>
         </div>
     </div>
