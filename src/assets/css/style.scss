@@ -26,14 +26,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: $main_color;
-    min-height: 600vh;
+    min-height: 700vh;
     color: $font_color;
     position: relative;
     z-index: -100;
     border-radius: 10px;
+    overflow-x: hidden;
 
     @media( max-width: 1000px ) {
-        min-height: 800vh;
+        min-height: 900vh;
     }
 
     &::before {
@@ -65,7 +66,7 @@ button {
     border-radius: 30px;
     transition: all 0.3s ease;
     cursor: pointer;
-    overflow-x: hidden;
+    position: relative;
 
     @media (hover: hover) {
         &:hover {
@@ -73,6 +74,16 @@ button {
         }
     }
     &:active {background-color: $accent_color2;}
+
+    &::before {
+        content: "⛄";
+        font-size: 2em;
+        position: absolute;
+        
+        object-fit: contain;
+        top: -80%;
+        right:0;
+    }
 }
 
 .page {
@@ -99,12 +110,12 @@ a {
             left:0;
             bottom:-0.2em;
             border-radius: 30px;
-            background-color: $accent_color1;
+            background-color: lighten($accent_color1, 10%);
             transition: all 0.3s ease;
             transform: scaleX(0);
         }
         &:hover {
-            color: $accent_color1;
+            color: lighten($accent_color1, 10%);
         }
         &:hover::after {
             transform: scaleX(1);
@@ -119,11 +130,11 @@ a {
             left:0;
             bottom:-0.2em;
             border-radius: 30px;
-            background-color: $accent_color1;
+            background-color: lighten($accent_color1, 10%);
             transform: scaleX(0);
         }
         &:hover {
-            color: $accent_color1;
+            color: lighten($accent_color1, 10%);
         }
         &:hover::after {
             transform: scaleX(1);
@@ -198,6 +209,7 @@ nav {
         }
         p {
             margin: 1.4em 0 2.4em;
+            span { color: lighten($accent_color1, 10%); }
         }
         button {
             font-size: 0.9em;
@@ -222,15 +234,14 @@ nav {
                 z-index: -10;
                 transform: rotateZ(-78deg);
                 border-radius: 50%;
-
-                filter: blur(6px);
+                filter: blur(4px);
             }
             &::before {
                 content: "";
                 position: absolute;
                 width: 70%;
                 height: 140%;
-                background-color: $accent_color2;
+                background-color: lighten($accent_color2, 5%);
                 z-index: -8;
                 top:-25%;
                 left:15%;
@@ -348,6 +359,7 @@ nav {
         }
 
         h1 {
+            font-size: 2.6rem;
             justify-self: start;
             align-self: center;
         }
@@ -484,7 +496,6 @@ nav {
     }
 
     ul li a .text {
-        
         opacity: 0;
         transition: .5s;
         transform: translateY(20px); 
@@ -497,6 +508,27 @@ nav {
     }
 
     @media (hover:hover) {
+        ul li {
+            position: relative;
+
+            &::after { // Add this block
+                content: 'See portfolio'; // Replace this with your custom tooltip
+                position: absolute;
+                font-size: 0.7em;
+                top: 0%; // Position the tooltip below the img element
+                left: 16%; // Center the tooltip
+                background-color: $accent_color1;
+                border: solid $accent_color2 1px;
+                color: $font_color;
+                border-radius: 20px;
+                padding: 0.4em 1em;
+                opacity: 0;
+                transition: opacity 1s ease;
+            }
+
+            &:hover::after { opacity: 1; }
+        }
+
         ul li:hover img {
             transform: translateY(-20px) scale(.7);
         }
@@ -513,5 +545,227 @@ nav {
     ul li:active .text {
         transform: translateY(-20px) scale(1.1);
         opacity: 1;
+    }
+}
+
+
+.projectImage {
+    width: 20em;
+    height: 20em;
+
+    .image {
+        border-radius: 30px;
+        overflow: hidden;
+        border: solid $accent_color1 1px;
+    }
+    
+    img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+        transform: scale(1.1);
+        transition: all 0.3s ease-in;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1);
+        }
+    }
+    h1, p { margin: 0;}
+
+    .title {
+        width: fit-content;
+        font-size: 1.6em;
+        margin: 0.6em 0.6rem 0.4em;
+    }
+    p {
+        font-size: 1.1em;
+        margin: 0 0.8em;
+    }
+}
+
+.projects {
+    margin: 5em 0 10em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4em;
+    justify-content: center;
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        background-color: $accent_color2;
+        z-index: -8;
+        top:10%;
+        left:-50%;
+        border-radius: 50%;
+        // transform: rotateZ(-45deg);
+        filter: blur(140px);
+    }
+
+    h1.projectsTitle {
+        font-size: 2.6rem;
+    }
+
+    .projectWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+    .description {
+        text-align: justify;
+        font-size: 1.2em;
+        width: 90%;
+    }
+
+    @media (max-width: 1000px) {
+        gap: 2em;
+        .projectWrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2em;
+
+            .description {
+                grid-row: 2/3;
+                width: 70%;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        gap: 1em;
+        .projectWrapper {
+            .description {width: 90%;}
+        }
+    }
+}
+
+.animate {
+    @keyframes leftSlide{
+        0% {
+            opacity: 0; 
+            transform: translateX(50%); 
+        }
+        100% { 
+            opacity: 1;
+            opacity: translateX(0); 
+        }
+    }
+    @keyframes rightSlide{
+        0% { 
+            opacity: 0;
+            transform: translateX(-50%); 
+        }
+        100% { 
+            opacity: 1;
+            opacity: translateX(0); 
+        }
+    }
+    .leftImage{
+        animation: rightSlide 1s ease-out forwards; 
+    }
+    .rightImage{
+        animation: leftSlide 1s ease-out forwards; 
+    }
+}
+
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70vh;
+    place-items: center;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        background-color: $accent_color2;
+        z-index: -8;
+        bottom: 0%;
+        left: -10%;
+        border-radius: 50%;
+        // transform: rotateZ(-45deg);
+        filter: blur(140px);
+    }
+
+    .leftColumn {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1em;
+        h1 {font-size: 2.6rem;}
+        p {margin: 1em 0 2em;}
+        p > span {
+            color: lighten($accent_color1, 10%);
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background-color: transparent; 
+            padding: 0.8em 0;
+            width: 100%;
+            font-size: 1.2rem;
+            color: $font_color;
+            transition: border-color 0.5s ease;
+        }
+
+        .inputWrapper {
+            position: relative;
+            margin: 0.3em;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                border-radius: 20px;
+                background-color: $font_color;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        input:focus {
+            border-color: $font_color; // Change the bottom border color when the input is focused
+        }
+    }
+
+    .rightColumn {
+        justify-self: end;
+        align-self: center;
+        ul, li { all: unset; }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            svg {
+                position: relative;
+                bottom: -0.3em;
+                font-size: 1.4em;
+            }
+        }
+        li {display: block}   
+    }
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 2fr 1fr;
+    }
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+
+        .rightColumn {
+            ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
     }
 }

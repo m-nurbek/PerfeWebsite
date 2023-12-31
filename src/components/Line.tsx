@@ -28,7 +28,7 @@ function Line() {
 
     return (
         <>
-            <div ref={ref} className="line"><span className="line_span">✨</span></div>
+            <div ref={ref} className="line"><span className="line_span">❄️</span></div>
         </>
     );
 }

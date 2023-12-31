@@ -11,7 +11,7 @@ function Welcome() {
     <div className='welcome_container'>
       <div className="text">
         <h1>We are PerFe</h1>
-        <p>A web development agency aimed at crafting <span>functional websites</span>.</p>
+        <p>A web development agency aimed at crafting <span>functional websites</span></p>
         <button>Get in touch!</button>
       </div>
       <div className="icons_wrapper">
