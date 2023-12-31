@@ -411,8 +411,16 @@ nav {
     gap: 4em;
     
     font-size: 1.3em;
-
     position: relative;
+
+    @media (max-width: 1700px) {
+        height: 150vh;
+        grid-template-rows: 1fr 4fr;
+    }
+    @media (max-width: 1000px) {
+        height: 240vh;
+        grid-template-rows: 1fr 8fr;
+    }
 
     &::before {
         content: "";
@@ -435,12 +443,12 @@ nav {
         margin: 0 auto;
         display: grid;
         place-items: center;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
         max-height: 25vh;
         gap: 1em;
 
         @media (max-width: 1700px) {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(2, 1fr);
         }
 
         @media (max-width: 1000px) {
