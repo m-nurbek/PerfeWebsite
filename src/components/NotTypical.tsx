@@ -27,7 +27,7 @@ export default function NotTypical() {
     }, []);
 
     return (
-    <div className='notTypical' ref={ref}>
+    <div className='notTypical' ref={ref} id={"about"}>
         <div className="textContainer">
             <>
                 <h1>Not your typical web agency</h1>

@@ -32,7 +32,7 @@ function TeamDescription() {
 
   return (
     <>
-    <div className="teamContainer" ref={ref}>
+    <div className="teamContainer" ref={ref} id="team">
       <h1>Our Team</h1>
 
       <ul className="teamCard">
@@ -49,7 +49,7 @@ function TeamDescription() {
 
         <li>
           <div className="single-img">
-            <a href="#">
+            <a href="https://m-nurbek.github.io/PersonalPortfolio/">
               <img src={Nurbek} alt="Nurbek" />
               <div className="text">
                 Nurbek Malikov <br/> <span>Back End Developer</span>
@@ -60,7 +60,7 @@ function TeamDescription() {
 
         <li>
           <div className="single-img">
-            <a href="#">
+            <a href="https://m-nurbek.github.io/DariyaPortfolio/">
               <img src={Dariya} alt="Dariya" />
               <div className="text">
                 Dariya Dalabayeva <br/> <span>Project Manager</span>

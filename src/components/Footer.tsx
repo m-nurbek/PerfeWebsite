@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <>
-      <footer>
+      <footer id="footer">
         <div className="leftColumn">
           <h1>Contact Us☎️</h1>
           <p>Type your <span>Phone number</span> or <span>Email</span> and we will contact you soon!😉</p>

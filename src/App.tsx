@@ -10,6 +10,7 @@ import Welcome from './components/Welcome';
 
 
 function App() {
+
     return (
         <>
             <div className="page">
@@ -20,9 +21,9 @@ function App() {
                 <Line />
                 <OurServices />
                 <Line />
-                <TeamDescription />
-                <Line />
                 <Projects />
+                <Line />
+                <TeamDescription />
                 <Line />
                 <Footer />
             </div>

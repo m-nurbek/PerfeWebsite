@@ -1,5 +1,8 @@
 import GalleryItem from "./GalleryItem";
-import Image from "../assets/img/Service1.png";
+import MoneyOfKZ from "../assets/img/MoneyOfKZ.jpg";
+import PortfolioNurbek from "../assets/img/PortfolioNurbek.png";
+import PortfolioDariya from "../assets/img/PortfolioDariya.png";
+
 import { useEffect, useRef } from "react";
 
 
@@ -44,31 +47,31 @@ function Projects() {
     
     return (
         <>
-            <div className="projects">
+            <div className="projects" id="projects">
                 <h1 className="projectsTitle">💻Our Projects</h1>
                 
                 <div className="projectWrapper" ref={ref1}>
                     <div className="leftImage">
                         <GalleryItem 
-                            imageUrl={Image}
-                            title={"Монеты Казахстана"}
+                            imageUrl={MoneyOfKZ}
+                            title={"Coins of the Kazakhstan"}
                             tags={"#app #playstore"}
                         />
                     </div>
                     <div className="description rightImage">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorem, veniam assumenda porro alias cum facere praesentium id, enim doloribus suscipit quam ad labore sapiente voluptatum. Dolorem odio adipisci dolores?
+                        The app is the catalogue of the coins of Republic of Kazakhstan. It was designed and created for the <span>National Bank of Republic of Kazakhstan</span>, and displays the issued coins of the national currency of three types: <span>circulation, bullion and collectible coins</span>. All types of coins are legal tender.
                     </div>
                 </div>
 
                 <div className="projectWrapper" ref={ref2}>
                     <div className="description leftImage">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorem, veniam assumenda porro alias cum facere praesentium id, enim doloribus suscipit quam ad labore sapiente voluptatum. Dolorem odio adipisci dolores?
+                        This portfolio, showcasing the skills and projects of Nurbek Malikov, a backend developer, was diligently put together by our team. We aimed to highlight his experience and creativity in web development, providing a comprehensive view of his professional journey.
                     </div>
                     <div className="rightImage">
                         <GalleryItem 
-                            imageUrl={Image}
-                            title={"Монеты Казахстана"}
-                            tags={"#app #playstore"}
+                            imageUrl={PortfolioNurbek}
+                            title={"Personal Portfolio Website for Nurbek"}
+                            tags={"#website #portfolio #design"}
                         />
                     </div>
                 </div>
@@ -76,13 +79,13 @@ function Projects() {
                 <div className="projectWrapper" ref={ref3}>
                     <div className="leftImage">
                         <GalleryItem 
-                            imageUrl={Image}
-                            title={"Монеты Казахстана"}
-                            tags={"#app #playstore"}
+                            imageUrl={PortfolioDariya}
+                            title={"Personal Portfolio Website for Dariya"}
+                            tags={"#website #portfolio #design"}
                         />
                     </div>
                     <div className="description rightImage">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor dolorem, veniam assumenda porro alias cum facere praesentium id, enim doloribus suscipit quam ad labore sapiente voluptatum. Dolorem odio adipisci dolores?
+                        This portfolio was meticulously crafted for Dariya Dalabayeva by our dedicated team, showcasing her extensive experience and achievements in strategic communications and public relations. Our aim was to highlight her passion, skills, and contributions in a concise and engaging manner.
                     </div>
                 </div>
                 

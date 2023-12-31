@@ -10,25 +10,17 @@ $transition: 1.1s ease-in-out;
 
 .container {
     width: 100%;
-    margin: 0 auto;
+    margin: 10em auto;
     min-height: 100vh;
-    display: grid;
-    justify-items: center;
-    align-items: start;
-    grid-template-rows: 1fr 2fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
 
     h1 {
         font-size: 2.4rem;
         align-self: center;
-    }
-
-    @media (max-width: 1873px) {
-        grid-template-rows: 1fr 3fr;
-        padding-bottom: 8em;
-    }
-
-    @media (max-width: 944px) {
-        grid-template-rows: 1fr 5fr;
     }
   }
 

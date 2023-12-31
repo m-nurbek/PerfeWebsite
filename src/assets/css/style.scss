@@ -13,6 +13,9 @@ $nav_padding: 0.4em;
 $nav_margin: 1em;
 $font_size: 1.2rem;
 
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     font-family: 'Montserrat', sans-serif;
@@ -384,30 +387,39 @@ nav {
 }
 .fadeIn {
     .textContainer {
-        h1 {animation: fadeIn 1s ease-in forwards;}
-        p {animation: fadeIn 1.5s ease-in forwards;}
-        a {animation: fadeIn 2s ease-in forwards;}
+        h1 {animation: fadeIn 2s ease-in forwards;}
+        p {animation: fadeIn 2.5s ease-in forwards;}
+        a {animation: fadeIn 3s ease-in forwards;}
     }
 
-    .line_span {animation: fadeIn 1s ease-in forwards;}
+    .line_span {animation: fadeIn 1.5s ease-in forwards;}
 
     .card__bx {
         &:nth-child(1) {
-            animation: fadeIn 0.5s ease-in forwards;
-        }
-        &:nth-child(2) {
             animation: fadeIn 1s ease-in forwards;
         }
-        &:nth-child(3) {
+        &:nth-child(2) {
             animation: fadeIn 1.5s ease-in forwards;
+        }
+        &:nth-child(3) {
+            animation: fadeIn 1.8s ease-in forwards;
+        }
+        &:nth-child(4) {
+            animation: fadeIn 2s ease-in forwards;
+        }
+        &:nth-child(5) {
+            animation: fadeIn 2.2s ease-in forwards;
+        }
+        &:nth-child(6) {
+            animation: fadeIn 2.4s ease-in forwards;
         }
     }
 
     ul.teamCard > li {
-        &:nth-child(1) {animation: fadeIn 0.5s ease-in forwards;}
-        &:nth-child(2) {animation: fadeIn 1.0s ease-in forwards;}
-        &:nth-child(3) {animation: fadeIn 1.5s ease-in forwards;}
-        &:nth-child(4) {animation: fadeIn 2.0s ease-in forwards;}
+        &:nth-child(1) {animation: fadeIn 1.5s ease-in forwards;}
+        &:nth-child(2) {animation: fadeIn 2s ease-in forwards;}
+        &:nth-child(3) {animation: fadeIn 2.5s ease-in forwards;}
+        &:nth-child(4) {animation: fadeIn 3.0s ease-in forwards;}
     }
 }
 
@@ -422,25 +434,15 @@ nav {
 
 .teamContainer {
     user-select: none;
-    display: grid;
+    display: flex;
     flex-direction: column;
-    justify-items: center;
-    align-items: end;
-    grid-template-rows: 1fr 2fr;
-    height: 100vh;
-    gap: 4em;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
     
     font-size: 1.3em;
     position: relative;
-
-    @media (max-width: 1700px) {
-        height: 150vh;
-        grid-template-rows: 1fr 4fr;
-    }
-    @media (max-width: 1000px) {
-        height: 240vh;
-        grid-template-rows: 1fr 8fr;
-    }
 
     &::before {
         content: "";
@@ -464,7 +466,7 @@ nav {
         display: grid;
         place-items: center;
         grid-template-columns: repeat(4, 1fr);
-        max-height: 25vh;
+        
         gap: 1em;
 
         @media (max-width: 1700px) {
@@ -563,19 +565,19 @@ nav {
         width: 100%;
         object-fit: cover;
         aspect-ratio: 1/1;
-        transform: scale(1.1);
+        transform: scale(1.15);
         transition: all 0.3s ease-in;
     }
 
     &:hover {
         img {
-            transform: scale(1);
+            transform: scale(1.05);
         }
     }
     h1, p { margin: 0;}
 
     .title {
-        width: fit-content;
+        width: 100%;
         font-size: 1.6em;
         margin: 0.6em 0.6rem 0.4em;
     }
@@ -591,7 +593,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4em;
+    gap: 10em;
     justify-content: center;
     position: relative;
     
@@ -610,6 +612,7 @@ nav {
     }
 
     h1.projectsTitle {
+        justify-self: end;
         font-size: 2.6rem;
     }
 
@@ -617,19 +620,25 @@ nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
         place-items: center;
+        gap: 2em;
     }
     .description {
         text-align: justify;
         font-size: 1.2em;
         width: 90%;
+
+        span {
+            color: lighten($accent_color1, 10%);
+        }
     }
 
     @media (max-width: 1000px) {
+        margin: 2em 0;
         gap: 2em;
         .projectWrapper {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
-            gap: 2em;
+            gap: 4em;
 
             .description {
                 grid-row: 2/3;

@@ -7,12 +7,17 @@ import Snow5 from "../assets/svg/Snow5";
 
 
 function Welcome() {
+  const scrollToIconsWrapper = () => {
+    const element = document.getElementById('footer');
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='welcome_container'>
       <div className="text">
         <h1>We are PerFe</h1>
         <p>A web development agency aimed at crafting <span>functional websites</span></p>
-        <button>Get in touch!</button>
+        <button onClick={scrollToIconsWrapper}>Get in touch!</button>
       </div>
       <div className="icons_wrapper">
 
