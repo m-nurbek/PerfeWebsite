@@ -3,6 +3,7 @@ import {useState} from "react"; // Import your CSS file
 import InstIcon from '../assets/svg/InstIcon.svg';
 import EmailIcon from '../assets/svg/EmailIcon.svg';
 import PFLogo from '../assets/svg/PF_logo.svg';
+import * as https from "https";
 
 
 function Footer(){

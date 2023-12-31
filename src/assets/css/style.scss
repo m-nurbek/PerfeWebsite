@@ -437,7 +437,7 @@ nav {
         place-items: center;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         max-height: 25vh;
-        gap: 2em;
+        gap: 1em;
 
         @media (max-width: 1700px) {
             grid-template-columns: 1fr 1fr;
@@ -462,7 +462,7 @@ nav {
     ul li a img {
         transition: .5s;
         width: 100%;
-        height: 100%;
+        aspect-ratio: 1/1;
         object-fit: cover;
         border-radius: 20px;
     }
