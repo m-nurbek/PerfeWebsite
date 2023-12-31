@@ -1,29 +1,38 @@
-import '../css/Welcome.css';
-import Desktop3D from "./Desktop3D.tsx";
-import LevitatingObj from "./animation_kit/LevitatingObj.tsx";
+import DesktopImg from "../assets/img/icons/Rectangle.png";
+import Snow1 from "../assets/svg/Snow1";
+import Snow2 from "../assets/svg/Snow2";
+import Snow3 from "../assets/svg/Snow3";
+import Snow4 from "../assets/svg/Snow4";
+import Snow5 from "../assets/svg/Snow5";
 
-export default function Welcome() {
+
+function Welcome() {
   return (
-    <div className='welcome'>
-      <div className="text-content">
+    <div className='welcome_container'>
+      <div className="text">
         <h1>We are PerFe</h1>
         <p>A web development agency aimed at crafting <span>functional websites</span>.</p>
         <button>Get in touch!</button>
       </div>
-      <div className="icons-container">
-          <LevitatingObj className="icon1"><img src="/src/assets/images/Icons1.png" alt="Icon 1" /></LevitatingObj>
-          <LevitatingObj className="icon2"><img src="/src/assets/images/Icons2.png" alt="Icon 2" /></LevitatingObj>
-          <LevitatingObj className="icon3"><img src="/src/assets/images/Icons3.png" alt="Icon 3" /></LevitatingObj>
-          <LevitatingObj className="icon4"><img src="/src/assets/images/Icons4.png" alt="Icon 4" /></LevitatingObj>
-          <LevitatingObj className="icon5"><img src="/src/assets/images/Icons5.png" alt="Icon 5" /></LevitatingObj>
-          <LevitatingObj className="icon6"><img src="/src/assets/images/Icons6.png" alt="Icon 6" /></LevitatingObj>
-          <LevitatingObj className="icon7"><img src="/src/assets/images/Icons7.png" alt="Icon 7" /></LevitatingObj>
-          <LevitatingObj className="icon8"><img src="/src/assets/images/Icons8.png" alt="Icon 8" /></LevitatingObj>
-          <Desktop3D className={"Desktop"}/>
+      <div className="icons_wrapper">
+
+        <div className="desktop">
+          <img src={DesktopImg} alt="desktop" />
+        </div>
+        <div className="snow">
+          <Snow1 className="snow1"/>
+          <Snow2 className="snow2"/>
+          <Snow3 className="snow3"/>
+          <Snow4 className="snow4"/>
+          <Snow5 className="snow5"/>
+          <Snow2 className="snow6"/>
+          <Snow3 className="snow7"/>
+          <Snow4 className="snow8"/>
+        </div>
+
       </div>
-
     </div>
-
   );
-  
 }
+
+export default Welcome;

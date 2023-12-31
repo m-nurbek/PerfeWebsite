@@ -1,93 +1,73 @@
-import { useEffect, useState } from 'react';
-import { animated, config, useInView, useSpring } from 'react-spring';
-import WebsiteImage from '/src/assets/img/Service2.png';
-
-
-function AnimatedComponentLeft({ children }) {
-  const [ref, inView] = useInView();
-
-  const [resetAnimation, setResetAnimation] = useState(false);
-
-  const springProps = useSpring({
-    from: { opacity: 0, transform: 'translateX(-100%)' },
-    to: { opacity: inView ? 1 : 0, transform: inView ? 'translateX(0)' : 'translateX(-100%)' },
-    config: config.molasses,
-    onRest: () => {
-      if (!inView && resetAnimation) {
-        setResetAnimation(false);
-      }
-    },
-  });
-
-  useEffect(() => {
-    if (!inView) {
-      // Reset the animation when out of view
-      setResetAnimation(true);
-    }
-  }, [inView]);
-
-  return <animated.div ref={ref} style={springProps}>{children}</animated.div>;
-}
-
-function AnimatedComponentRight({ children }) {
-  const [ref, inView] = useInView();
-
-  const [resetAnimation, setResetAnimation] = useState(false);
-
-  const springProps = useSpring({
-    from: { opacity: 0, transform: 'translateX(100%)' },
-    to: { opacity: inView ? 1 : 0, transform: inView ? 'translateX(0)' : 'translateX(100%)' },
-    config: config.molasses,
-    onRest: () => {
-      if (!inView && resetAnimation) {
-        setResetAnimation(true);
-      }
-    },
-  });
-
-  useEffect(() => {
-    if (!inView) {
-      // Reset the animation when out of view
-      setResetAnimation(true);
-    }
-  }, [inView]);
-
-  return <animated.div ref={ref} style={springProps}>{children}</animated.div>;
-}
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode, faPaintBrush, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useRef} from 'react';
 
 function OurServices() {
-  const imageScale = 1.2;
+  const ref = useRef(null);
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadeIn');
+                } else {
+                    entry.target.classList.remove('fadeIn');
+                }
+            });
+        });
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        }
+    }, []);
+  
   return (
     <>
-      <h1 style={{ fontFamily: "Montserrat", fontSize: "60px", marginBottom: '100px' }}>Our Services </h1>
-
-      <div className="container">
-        <AnimatedComponentLeft>
-          <div className="column" >
-
-            <img src={WebsiteImage} style={{ transform: `scale(${imageScale})` }} />
-            <div className="column">
-              <h4 style={{ fontFamily: "Montserrat", fontSize: "20px", marginRight: "160px", marginLeft: "160px" }}>We create websites from the ground up.</h4>
-            </div>
-            <img style={{ marginTop: "60px", transform: `scale(${imageScale})` }} src={WebsiteImage} />
-
-            <div className="column">
-              <h4 style={{ fontFamily: "Montserrat", fontSize: "20px", marginRight: "160px", marginLeft: "160px" }}>We deliver personalized website designs.</h4>
+      <section className="container">
+        <h1>Our Services</h1>
+        <section className="card__container" ref={ref}>
+          <div className="card__bx">
+            <div className="card__data">
+              <div className="card__icon">
+                <FontAwesomeIcon icon={faPaintBrush} />
+              </div>
+              <div className="card__content">
+                <h3>Designing</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
             </div>
           </div>
-        </AnimatedComponentLeft>
-        <AnimatedComponentRight>
-          <div className="column">
-
-            <img src={WebsiteImage} style={{ marginTop: "200px", transform: `scale(${imageScale}) rotate(-90deg)` }} />
-
-            <div className="column">
-              <h4 style={{ fontFamily: "Montserrat", fontSize: "20px", marginRight: "160px", marginLeft: "160px", marginTop: "140px" }}>We revise existing websites & recommend improvements.</h4>
+          <div className="card__bx">
+            <div className="card__data">
+              <div className="card__icon">
+                <FontAwesomeIcon icon={faCode} />
+              </div>
+              <div className="card__content">
+                <h3>Development</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
             </div>
           </div>
-        </AnimatedComponentRight>
-      </div>
+            <div className="card__bx">
+            <div className="card__data">
+              <div className="card__icon">
+                <FontAwesomeIcon icon={faSearch} />
+              </div>
+              <div className="card__content">
+                <h3>SEO</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </section>
     </>
   );
 }

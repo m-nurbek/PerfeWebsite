@@ -1,0 +1,119 @@
+$main_color: #080808;
+$main_color_transparent: #0808084b;
+$font_color: #d3d4d3;
+$accent_color1: #422ba0;
+$accent_color2: #140827;
+$clr: lighten($accent_color1, 20%);
+
+$transition: 1.1s ease-in-out;
+
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    grid-template-rows: 1fr 2fr;
+
+    h1 {
+        font-size: 2.2em;
+        align-self: center;
+    }
+
+    @media (max-width: 1873px) {
+        grid-template-rows: 1fr 3fr;
+        padding-bottom: 8em;
+    }
+
+    @media (max-width: 944px) {
+        grid-template-rows: 1fr 5fr;
+    }
+  }
+
+.card__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card__bx {  
+    height: 25em;
+    width: 20em;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 12px 0 lighten($accent_color2, 10%);
+    border: solid 1px lighten($accent_color2, 10%);
+    background: $accent_color2;
+    transition: $transition;
+  }
+  
+  .card__bx .card__data {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 0 20px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .card__bx .card__data .card__icon {
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: $font_color;
+    background-color: $accent_color2;
+    transition: $transition;
+  }
+  .card__bx .card__data .card__icon {
+    color: $clr;
+    box-shadow: 0 0 0 4px $accent_color1, 0 0 0 6px $clr;
+  }
+  .card__bx:hover .card__data .card__icon {
+    color: $accent_color1;
+    background-color: $clr;
+    box-shadow: 0 0 0 4px $accent_color1, 0 0 0 32em $clr;
+  }
+  .card__bx .card__data .card__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card__bx .card__data h3 {
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: $font_color;
+    transition: $transition;
+  }
+  .card__bx:hover .card__data h3 {
+    color: $main_color;
+    transition: $transition;
+  }
+  .card__bx .card__data p {
+    font-size: 0.9rem;
+    color: $font_color;
+    transition: $transition;
+  }
+  .card__bx:hover .card__data p {
+    color: $main_color;
+    transition: $transition;
+  }
+
+  

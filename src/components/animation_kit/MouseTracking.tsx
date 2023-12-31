@@ -21,7 +21,7 @@ function MouseTracking({children, maxDegreeX, maxDegreeY, id} : Props) {
         '--rotateY': '0deg',
         '--rotateX': '0deg',
         transformStyle: 'preserve-3d',
-        transform: 'scale(0.4) rotateY(var(--rotateY)) rotateX(var(--rotateX))'
+        transform: 'scale(0.6) rotateY(var(--rotateY)) rotateX(var(--rotateX))'
     };
 
     function rotateElement(event: React.MouseEvent, element: React.MutableRefObject<HTMLDivElement | null>) {

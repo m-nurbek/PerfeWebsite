@@ -1,8 +1,0 @@
-.person-card {
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.person-card.animate {
-  opacity: 1;
-}
