@@ -2,15 +2,40 @@ import Ardak from "../assets/img/Ardak.jpg";
 import Nurbek from "../assets/img/Nurbek.jpg";
 import Alda from "../assets/img/Alda.jpg";
 import Dariya from "../assets/img/Dariya.jpg";
+import { useEffect, useRef} from 'react';
 
 
 function TeamDescription() {
+  const ref = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fadeIn');
+                } else {
+                    entry.target.classList.remove('fadeIn');
+                }
+            });
+        });
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        }
+    }, []);
+
   return (
     <>
-    <div className="teamContainer">
+    <div className="teamContainer" ref={ref}>
       <h1>Our Team</h1>
 
-      <ul>
+      <ul className="teamCard">
         <li>
           <div className="single-img">
             <a href="#">

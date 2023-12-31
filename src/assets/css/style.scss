@@ -365,6 +365,7 @@ nav {
         }
     }
 }
+
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% { opacity: 1; }
@@ -376,18 +377,25 @@ nav {
         a {animation: fadeIn 2s ease-in forwards;}
     }
 
-    .line_span {animation: fadeIn 0.5s ease-in forwards;}
+    .line_span {animation: fadeIn 1s ease-in forwards;}
 
     .card__bx {
         &:nth-child(1) {
-            animation: fadeIn 0.3s ease-in forwards;
+            animation: fadeIn 0.5s ease-in forwards;
         }
         &:nth-child(2) {
-            animation: fadeIn 0.6s ease-in forwards;
+            animation: fadeIn 1s ease-in forwards;
         }
         &:nth-child(3) {
-            animation: fadeIn 0.9s ease-in forwards;
+            animation: fadeIn 1.5s ease-in forwards;
         }
+    }
+
+    ul.teamCard > li {
+        &:nth-child(1) {animation: fadeIn 0.5s ease-in forwards;}
+        &:nth-child(2) {animation: fadeIn 1.0s ease-in forwards;}
+        &:nth-child(3) {animation: fadeIn 1.5s ease-in forwards;}
+        &:nth-child(4) {animation: fadeIn 2.0s ease-in forwards;}
     }
 }
 
