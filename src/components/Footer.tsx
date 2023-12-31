@@ -17,6 +17,7 @@ function Footer() {
           <div className="inputWrapper">
             <input type="tel" name="phone" id="tel" placeholder="+7 777 777 7777"/>
           </div>
+          <button style={{marginTop: '3em', width: 'fit-content'}}>Send it!</button>
         </div>
         <div className="rightColumn">
           <h1></h1>

@@ -65,7 +65,7 @@ function Projects() {
 
                 <div className="projectWrapper" ref={ref2}>
                     <div className="description leftImage">
-                        This portfolio, showcasing the skills and projects of Nurbek Malikov, a backend developer, was diligently put together by our team. We aimed to highlight his experience and creativity in web development, providing a comprehensive view of his professional journey.
+                        This portfolio, showcasing the <span>skills and projects</span> of Nurbek Malikov, a backend developer, was diligently put together by our team. We aimed to highlight his <span>experience and creativity</span> in web development, providing a comprehensive view of his <span>professional journey</span>.
                     </div>
                     <div className="rightImage">
                         <GalleryItem 
@@ -85,7 +85,7 @@ function Projects() {
                         />
                     </div>
                     <div className="description rightImage">
-                        This portfolio was meticulously crafted for Dariya Dalabayeva by our dedicated team, showcasing her extensive experience and achievements in strategic communications and public relations. Our aim was to highlight her passion, skills, and contributions in a concise and engaging manner.
+                        This portfolio was meticulously crafted for Dariya Dalabayeva by our dedicated team, <span>showcasing her extensive experience and achievements</span> in strategic communications and public relations. Our aim was to highlight her <span>passion, skills, and contributions</span> in a concise and engaging manner.
                     </div>
                 </div>
                 

@@ -85,7 +85,7 @@ button {
         
         object-fit: contain;
         top: -80%;
-        right:0;
+        left: 5%;
     }
 }
 
@@ -95,6 +95,9 @@ button {
 
     @media (max-width: 1600px) {
         width: 90vw;
+    }
+    @media ( max-width: 370px ) {
+        width: 98vw;
     }
 }
 
@@ -178,6 +181,14 @@ nav {
         li {all: unset;}
     }
 
+    @media (max-width: 1000px) {
+        .links {
+            li:nth-child(1) {
+                display:none;
+            }
+        }
+    }
+
     @media (max-width: 800px){
         justify-content: center;
         span {
@@ -187,7 +198,7 @@ nav {
     }
     @media (max-width: 653px) {
         .links {
-            li:nth-child(1) {
+            li:nth-child(5) {
                 display:none;
             }
         }
@@ -555,10 +566,13 @@ nav {
     width: 20em;
     height: 20em;
 
+    box-shadow: 4px 4px 10px 0 lighten($accent_color2, 30%);
+    border-radius:30px;
+
     .image {
         border-radius: 30px;
         overflow: hidden;
-        border: solid $accent_color1 1px;
+        border: solid $accent_color1 4px;
     }
     
     img {
@@ -593,9 +607,14 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10em;
     justify-content: center;
     position: relative;
+
+    h1 { margin-bottom: 2em; }
+
+    > *:not(h1) {
+        margin-bottom: 8em;
+    }
     
     &::before {
         content: "";
@@ -635,9 +654,12 @@ nav {
     @media (max-width: 1000px) {
         margin: 2em 0;
         gap: 2em;
+        h1 { margin-bottom: 0; }
+        > *:not(h1) { margin-bottom: 0; }
+        
         .projectWrapper {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr 1.2fr;
             gap: 4em;
 
             .description {
@@ -647,9 +669,9 @@ nav {
         }
     }
     @media (max-width: 600px) {
-        gap: 1em;
+        gap: 2em;
         .projectWrapper {
-            .description {width: 90%;}
+            .description {width: 80%;}
         }
     }
 }
