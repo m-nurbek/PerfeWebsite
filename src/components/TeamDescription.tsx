@@ -3,11 +3,11 @@ import Nurbek from "/Nurbek.jpg";
 import Alda from "/Alda.jpg";
 import Dariya from "/Dariya.jpg";
 import { useEffect, useRef} from 'react';
-
+import { useTranslation } from 'react-i18next';
 
 function TeamDescription() {
   const ref = useRef(null);
-
+  const { t } = useTranslation();
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
@@ -33,7 +33,7 @@ function TeamDescription() {
   return (
     <>
     <div className="teamContainer" ref={ref} id="team">
-      <h1>Our Team</h1>
+      <h1>{t('Our Team')}</h1>
 
       <ul className="teamCard">
         <li>
@@ -41,7 +41,7 @@ function TeamDescription() {
             <a href="#">
               <img src={Ardak} alt="Ardak" />
               <div className="text">
-                Ardak Atagulov <br/> <span>Front End Developer</span>
+                {t('Ardak Atagulov')} <br/> <span>{t('Front End Developer')}</span>
               </div>
             </a>
           </div>
@@ -52,7 +52,7 @@ function TeamDescription() {
             <a href="https://m-nurbek.github.io/PersonalPortfolio/">
               <img src={Nurbek} alt="Nurbek" />
               <div className="text">
-                Nurbek Malikov <br/> <span>Back End Developer</span>
+                {t('Nurbek Malikov')} <br/> <span>{t('Back End Developer')}</span>
               </div>
             </a>
           </div>
@@ -63,7 +63,7 @@ function TeamDescription() {
             <a href="https://m-nurbek.github.io/DariyaPortfolio/">
               <img src={Dariya} alt="Dariya" />
               <div className="text">
-                Dariya Dalabayeva <br/> <span>Project Manager</span>
+                {t('Dariya Dalabayeva')} <br/> <span>{t('Project Manager')}</span>
               </div>
             </a>
           </div>
@@ -74,7 +74,7 @@ function TeamDescription() {
             <a href="#">
               <img src={Alda} alt="Alda" />
               <div className="text">
-                Aldamzhar Kiikbayev<br/> <span>Full Stack Developer</span>
+                {t('Aldamzhar Kiikbayev')}<br/> <span>{t('Full Stack Developer')}</span>
               </div>
             </a>
           </div>

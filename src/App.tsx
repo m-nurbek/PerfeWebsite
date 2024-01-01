@@ -7,7 +7,7 @@ import OurServices from './components/OurServices';
 import Projects from './components/Projects';
 import TeamDescription from './components/TeamDescription';
 import Welcome from './components/Welcome';
-
+import './components/18n.js';
 
 function App() {
 

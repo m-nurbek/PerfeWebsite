@@ -4,20 +4,21 @@ import Snow2 from "../assets/svg/Snow2";
 import Snow3 from "../assets/svg/Snow3";
 import Snow4 from "../assets/svg/Snow4";
 import Snow5 from "../assets/svg/Snow5";
-
+import { useTranslation } from 'react-i18next';
 
 function Welcome() {
   const scrollToIconsWrapper = () => {
     const element = document.getElementById('footer');
     element.scrollIntoView({ behavior: 'smooth' });
   };
+  const { t } = useTranslation();
 
   return (
     <div className='welcome_container'>
       <div className="text">
-        <h1>We are PerFe</h1>
-        <p>A web development agency aimed at crafting <span>functional websites</span></p>
-        <button onClick={scrollToIconsWrapper}>Get in touch!</button>
+        <h1>{t('We are PerFe')}</h1>
+        <p>{t('A web development agency aimed at crafting')} <span>{t('functional websites')}</span></p>
+        <button onClick={scrollToIconsWrapper}>{t('Get in touch!')}</button>
       </div>
       <div className="icons_wrapper">
 
