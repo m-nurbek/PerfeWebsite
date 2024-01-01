@@ -148,6 +148,11 @@ a {
     }
 }
 
+a.disabled {
+    pointer-events: none;
+    color: #636363;
+}
+
 nav {
     position: sticky;
     z-index: 1000;

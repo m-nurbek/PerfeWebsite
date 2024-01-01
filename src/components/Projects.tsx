@@ -59,13 +59,13 @@ function Projects() {
                         />
                     </div>
                     <div className="description rightImage">
-                        {t('The app is the catalogue of the coins of Republic of Kazakhstan. It was designed and created for the')} <span>{t('National Bank of Republic of Kazakhstan')}</span>{t(', and displays the issued coins of the national currency of three types:')} <span>{t('circulation, bullion and collectible coins')}</span>{t('. All types of coins are legal tender.')}
+                        {t('The app is the catalogue of the coins of Republic of Kazakhstan. It was designed and created for the')} <span>{t('National Bank of Republic of Kazakhstan')}</span>{t(', and displays the issued coins of the national currency of three types:')} <span>{t('circulation, bullion and collectible coins')}</span>{t('. All types of coins are legal tender')}
                     </div>
                 </div>
 
                 <div className="projectWrapper" ref={ref2}>
                     <div className="description leftImage">
-                        {t('This portfolio, showcasing the')} <span>{t('skills and projects')}</span> {t('of Nurbek Malikov, a backend developer, was diligently put together by our team. We aimed to highlight his')}<span>{t('experience and creativity')}</span> {t('in web development, providing a comprehensive view of his')}<span>{t('professional journey')}</span>.
+                        {t('This portfolio, showcasing the')} <span>{t('skills and projects')}</span> {t('of Nurbek Malikov, a backend developer, was diligently put together by our team. We aimed to highlight his ')}<span>{t('experience and creativity')}</span> {t('in web development, providing a comprehensive view of his ')}<span>{t('professional journey')}</span>
                     </div>
                     <div className="rightImage">
                         <GalleryItem 
@@ -85,7 +85,7 @@ function Projects() {
                         />
                     </div>
                     <div className="description rightImage">
-                        {t('This portfolio was meticulously crafted for Dariya Dalabayeva by our dedicated team')} <span>{t(', showcasing her extensive experience and achievements')}</span> {t('in strategic communications and public relations. Our aim was to highlight her')} <span>{t('passion, skills, and contributions')}</span> {t('in a concise and engaging manner.')}
+                        {t('This portfolio was meticulously crafted for Dariya Dalabayeva by our dedicated team')} <span>{t(', showcasing her extensive experience and achievements')}</span> {t('in strategic communications and public relations. Our aim was to highlight her')} <span>{t('passion, skills, and contributions')}</span> {t('in a concise and engaging manner')}
                     </div>
                 </div>
                 

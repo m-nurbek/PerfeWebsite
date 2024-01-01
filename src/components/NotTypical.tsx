@@ -32,7 +32,7 @@ export default function NotTypical() {
             <>
                 <h1>{t('Not your typical web agency')}</h1>
                 <p>{t('PerFe is an')} <span>{t('operative and efficient')}</span> {t('web development agency where each project becomes a unique work of art. We specialise in modern and concise web solutions, where style meets functionality')}</p>
-                <a href="#services">{t('View services')}<span>→</span></a>
+                <a href="#services">{t('View services')} <span>→</span></a>
             </>
         </div>
     </div>
