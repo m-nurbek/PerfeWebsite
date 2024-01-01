@@ -167,6 +167,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1em;
 
     span {
         width:4em;
@@ -202,8 +203,11 @@ nav {
         .links {gap: 1em;}
     }
     @media (max-width: 653px) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 1em;
         .links {
-            li:nth-child(5) {
+            li:nth-child(5), li:nth-child(4) {
                 display:none;
             }
         }
@@ -703,10 +707,14 @@ nav {
         }
     }
     .leftImage{
-        animation: rightSlide 1s ease-out forwards; 
+        @media (min-width: 1000px) {
+            animation: rightSlide 1s ease-out forwards; 
+        }
     }
     .rightImage{
-        animation: leftSlide 1s ease-out forwards; 
+        @media (min-width: 1000px) { 
+            animation: leftSlide 1s ease-out forwards; 
+        }
     }
 }
 

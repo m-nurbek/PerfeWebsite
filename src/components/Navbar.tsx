@@ -17,9 +17,9 @@ export default function Navbar() {
         <li><a href="#team">{t("Our Team")}</a></li>
         <li><a href="#footer">{t('Contact Us')}</a></li>
       </ul>
-      <div>
-        <a onClick={() => changeLanguage("en")} style={{ margin: '0 10px', cursor: 'pointer' }}>ENG</a>
-        <a onClick={() => changeLanguage("ru")} style={{ margin: '0 10px', cursor: 'pointer' }}>RUS</a>
+      <div className="languageOptions">
+        <a onClick={() => changeLanguage("en")} style={{ margin: '0 0.6em', cursor: 'pointer', fontSize: '0.9em'}}>ENG</a>
+        <a onClick={() => changeLanguage("ru")} style={{ cursor: 'pointer', fontSize: '0.9em'}}>RUS</a>
       </div>
     </nav>
   );
