@@ -1,6 +1,6 @@
 import InstagramSVG from "../assets/svg/InstagramSVG";
-import TelegramSVG from "../assets/svg/TelegramSVG";
-import WhatsappSVG from "../assets/svg/WhatsappSVG";
+// import TelegramSVG from "../assets/svg/TelegramSVG";
+// import WhatsappSVG from "../assets/svg/WhatsappSVG";
 import { useTranslation } from 'react-i18next';
 
 function Footer() {
